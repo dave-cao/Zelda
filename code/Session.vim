@@ -21,6 +21,8 @@ badd +1 level.py
 badd +1 player.py
 badd +1 tile.py
 badd +8 debug.py
+badd +19 support.py
+badd +0 weapon.py
 argglobal
 %argdel
 $argadd main.py
@@ -42,11 +44,11 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 4 - ((3 * winheight(0) + 21) / 43)
+let s:l = 28 - ((11 * winheight(0) + 9) / 19)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 4
+keepjumps 28
 normal! 0
 tabnext
 edit settings.py
@@ -62,33 +64,51 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 8 - ((7 * winheight(0) + 21) / 43)
+let s:l = 21 - ((9 * winheight(0) + 9) / 19)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 8
-normal! 05|
+keepjumps 21
+normal! 03|
 tabnext
 edit level.py
 tcd ~/Documents/Coding_Projects/Currently_Working/Zelda/code
 argglobal
 balt ~/Documents/Coding_Projects/Currently_Working/Zelda/code/settings.py
-setlocal fdm=manual
+setlocal fdm=indent
 setlocal fde=0
 setlocal fmr={{{,}}}
 setlocal fdi=#
-setlocal fdl=0
+setlocal fdl=1
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-silent! normal! zE
-let &fdl = &fdl
-let s:l = 39 - ((37 * winheight(0) + 21) / 43)
+14
+normal! zo
+16
+normal! zo
+29
+normal! zo
+72
+normal! zo
+80
+normal! zo
+83
+normal! zo
+84
+normal! zo
+89
+normal! zo
+95
+normal! zo
+111
+normal! zo
+let s:l = 76 - ((61 * winheight(0) + 21) / 43)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 39
-normal! 055|
+keepjumps 76
+normal! 018|
 tabnext
 edit ~/Documents/Coding_Projects/Currently_Working/Zelda/code/player.py
 tcd ~/Documents/Coding_Projects/Currently_Working/Zelda/code
@@ -98,7 +118,122 @@ setlocal fdm=indent
 setlocal fde=0
 setlocal fmr={{{,}}}
 setlocal fdi=#
-setlocal fdl=0
+setlocal fdl=1
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+10
+normal! zo
+11
+normal! zo
+42
+normal! zo
+44
+normal! zo
+59
+normal! zo
+63
+normal! zo
+64
+normal! zo
+69
+normal! zo
+72
+normal! zo
+75
+normal! zo
+79
+normal! zo
+82
+normal! zo
+85
+normal! zo
+89
+normal! zo
+95
+normal! zo
+100
+normal! zo
+104
+normal! zo
+110
+normal! zo
+111
+normal! zo
+122
+normal! zo
+123
+normal! zo
+124
+normal! zo
+127
+normal! zo
+130
+normal! zo
+132
+normal! zo
+134
+normal! zo
+137
+normal! zo
+138
+normal! zo
+141
+normal! zo
+142
+normal! zo
+143
+normal! zo
+144
+normal! zo
+145
+normal! zo
+147
+normal! zo
+150
+normal! zo
+151
+normal! zo
+152
+normal! zo
+153
+normal! zo
+155
+normal! zo
+158
+normal! zo
+161
+normal! zo
+162
+normal! zo
+166
+normal! zo
+166
+normal! zo
+167
+normal! zo
+170
+normal! zo
+175
+normal! zo
+182
+normal! zo
+let s:l = 106 - ((26 * winheight(0) + 21) / 43)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 106
+normal! 039|
+tabnext
+edit ~/Documents/Coding_Projects/Currently_Working/Zelda/code/weapon.py
+tcd ~/Documents/Coding_Projects/Currently_Working/Zelda/code
+argglobal
+balt ~/Documents/Coding_Projects/Currently_Working/Zelda/code/player.py
+setlocal fdm=indent
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=1
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
@@ -106,56 +241,28 @@ setlocal fen
 normal! zo
 8
 normal! zo
-20
+17
 normal! zo
-40
+18
 normal! zo
-49
+21
 normal! zo
-50
+22
 normal! zo
-51
+25
 normal! zo
-52
+26
 normal! zo
-53
+29
 normal! zo
-58
+30
 normal! zo
-59
-normal! zo
-60
-normal! zo
-61
-normal! zo
-66
-normal! zo
-let s:l = 49 - ((17 * winheight(0) + 21) / 43)
+let s:l = 12 - ((11 * winheight(0) + 21) / 43)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 49
-normal! $
-tabnext
-edit ~/Documents/Coding_Projects/Currently_Working/Zelda/code/tile.py
-argglobal
-balt ~/Documents/Coding_Projects/Currently_Working/Zelda/code/player.py
-setlocal fdm=manual
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=0
-setlocal fml=1
-setlocal fdn=20
-setlocal fen
-silent! normal! zE
-let &fdl = &fdl
-let s:l = 10 - ((9 * winheight(0) + 21) / 43)
-if s:l < 1 | let s:l = 1 | endif
-keepjumps exe s:l
-normal! zt
-keepjumps 10
-normal! 0
+keepjumps 12
+normal! 042|
 tabnext 4
 set stal=1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0
