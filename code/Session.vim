@@ -22,11 +22,18 @@ badd +1 player.py
 badd +1 tile.py
 badd +8 debug.py
 badd +19 support.py
-badd +0 weapon.py
+badd +9 weapon.py
+badd +64 ui.py
+badd +45 entity.py
+badd +108 enemy.py
+badd +1 particles.py
+badd +0 magic.py
 argglobal
 %argdel
 $argadd main.py
 set stal=2
+tabnew +setlocal\ bufhidden=wipe
+tabnew +setlocal\ bufhidden=wipe
 tabnew +setlocal\ bufhidden=wipe
 tabnew +setlocal\ bufhidden=wipe
 tabnew +setlocal\ bufhidden=wipe
@@ -44,7 +51,7 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 28 - ((11 * winheight(0) + 9) / 19)
+let s:l = 28 - ((25 * winheight(0) + 21) / 43)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
@@ -64,12 +71,12 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 21 - ((9 * winheight(0) + 9) / 19)
+let s:l = 38 - ((22 * winheight(0) + 21) / 43)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 21
-normal! 03|
+keepjumps 38
+normal! 0
 tabnext
 edit level.py
 tcd ~/Documents/Coding_Projects/Currently_Working/Zelda/code
@@ -83,32 +90,152 @@ setlocal fdl=1
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-14
+17
 normal! zo
-16
+40
 normal! zo
-29
+53
 normal! zo
-72
+54
+normal! zo
+56
+normal! zo
+57
+normal! zo
+89
+normal! zo
+99
+normal! zo
+108
+normal! zo
+154
+normal! zo
+155
+normal! zo
+160
+normal! zo
+164
+normal! zo
+168
+normal! zo
+176
+normal! zo
+179
+normal! zo
+192
+normal! zo
+201
+normal! zo
+205
+normal! zo
+206
+normal! zo
+211
+normal! zo
+let s:l = 164 - ((62 * winheight(0) + 21) / 43)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 164
+normal! 09|
+tabnext
+edit ~/Documents/Coding_Projects/Currently_Working/Zelda/code/enemy.py
+tcd ~/Documents/Coding_Projects/Currently_Working/Zelda/code
+argglobal
+balt ~/Documents/Coding_Projects/Currently_Working/Zelda/code/level.py
+setlocal fdm=indent
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+9
+normal! zo
+10
+normal! zo
+20
+normal! zo
+58
+normal! zo
+64
+normal! zo
+69
+normal! zo
+76
+normal! zo
+79
 normal! zo
 80
 normal! zo
 83
 normal! zo
-84
+85
+normal! zo
+88
 normal! zo
 89
 normal! zo
-95
+92
+normal! zo
+94
+normal! zo
+97
+normal! zo
+99
+normal! zo
+100
+normal! zo
+103
+normal! zo
+107
 normal! zo
 111
 normal! zo
-let s:l = 76 - ((61 * winheight(0) + 21) / 43)
+112
+normal! zo
+125
+normal! zo
+126
+normal! zo
+128
+normal! zo
+130
+normal! zo
+136
+normal! zo
+137
+normal! zo
+152
+normal! zo
+let s:l = 126 - ((21 * winheight(0) + 21) / 43)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 76
-normal! 018|
+keepjumps 126
+normal! 037|
+tabnext
+edit ~/Documents/Coding_Projects/Currently_Working/Zelda/code/magic.py
+tcd ~/Documents/Coding_Projects/Currently_Working/Zelda/code
+argglobal
+balt ~/Documents/Coding_Projects/Currently_Working/Zelda/code/enemy.py
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+silent! normal! zE
+let &fdl = &fdl
+let s:l = 12 - ((11 * winheight(0) + 21) / 43)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 12
+normal! 0
 tabnext
 edit ~/Documents/Coding_Projects/Currently_Working/Zelda/code/player.py
 tcd ~/Documents/Coding_Projects/Currently_Working/Zelda/code
@@ -122,83 +249,57 @@ setlocal fdl=1
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-10
-normal! zo
 11
 normal! zo
-42
+14
 normal! zo
-44
-normal! zo
-59
+61
 normal! zo
 63
 normal! zo
-64
+78
 normal! zo
-69
-normal! zo
-72
-normal! zo
-75
-normal! zo
-79
-normal! zo
+61
+normal! zc
 82
 normal! zo
-85
+83
 normal! zo
-89
+88
 normal! zo
-95
+91
 normal! zo
-100
+94
+normal! zo
+98
+normal! zo
+101
 normal! zo
 104
 normal! zo
-110
+108
 normal! zo
-111
-normal! zo
-122
+114
 normal! zo
 123
 normal! zo
-124
-normal! zo
 127
 normal! zo
-130
-normal! zo
-132
-normal! zo
-134
+133
 normal! zo
 137
 normal! zo
-138
-normal! zo
-141
-normal! zo
-142
-normal! zo
-143
-normal! zo
-144
-normal! zo
-145
+146
 normal! zo
 147
 normal! zo
-150
+148
 normal! zo
 151
 normal! zo
-152
+154
 normal! zo
-153
-normal! zo
-155
+156
 normal! zo
 158
 normal! zo
@@ -206,64 +307,66 @@ normal! zo
 normal! zo
 162
 normal! zo
-166
+165
 normal! zo
-166
+168
 normal! zo
-167
+169
 normal! zo
-170
+172
 normal! zo
-175
+176
 normal! zo
-182
+177
 normal! zo
-let s:l = 106 - ((26 * winheight(0) + 21) / 43)
+180
+normal! zo
+181
+normal! zo
+184
+normal! zo
+185
+normal! zo
+188
+normal! zo
+193
+normal! zo
+201
+normal! zo
+204
+normal! zo
+207
+normal! zo
+212
+normal! zo
+let s:l = 18 - ((17 * winheight(0) + 21) / 43)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 106
-normal! 039|
+keepjumps 18
+normal! 0
 tabnext
-edit ~/Documents/Coding_Projects/Currently_Working/Zelda/code/weapon.py
+edit ~/Documents/Coding_Projects/Currently_Working/Zelda/code/particles.py
 tcd ~/Documents/Coding_Projects/Currently_Working/Zelda/code
 argglobal
 balt ~/Documents/Coding_Projects/Currently_Working/Zelda/code/player.py
-setlocal fdm=indent
+setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
 setlocal fdi=#
-setlocal fdl=1
+setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-7
-normal! zo
-8
-normal! zo
-17
-normal! zo
-18
-normal! zo
-21
-normal! zo
-22
-normal! zo
-25
-normal! zo
-26
-normal! zo
-29
-normal! zo
-30
-normal! zo
-let s:l = 12 - ((11 * winheight(0) + 21) / 43)
+silent! normal! zE
+let &fdl = &fdl
+let s:l = 38 - ((13 * winheight(0) + 21) / 43)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 12
-normal! 042|
-tabnext 4
+keepjumps 38
+normal! 034|
+tabnext 5
 set stal=1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0
   silent exe 'bwipe ' . s:wipebuf
@@ -276,6 +379,7 @@ if filereadable(s:sx)
   exe "source " . fnameescape(s:sx)
 endif
 let &g:so = s:so_save | let &g:siso = s:siso_save
+nohlsearch
 doautoall SessionLoadPost
 unlet SessionLoad
 " vim: set ft=vim :
