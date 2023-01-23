@@ -1,1 +1,4 @@
 Zelda.zip filter=lfs diff=lfs merge=lfs -text
+play/Zelda filter=lfs diff=lfs merge=lfs -text
+assets/ filter=lfs diff=lfs merge=lfs -text
+assets/zelda.gif filter=lfs diff=lfs merge=lfs -text

@@ -63,7 +63,7 @@ class Player(Entity):
         }
         self.health = self.stats["health"]
         self.energy = self.stats["energy"]
-        self.exp = 50000
+        self.exp = 500
         self.speed = self.stats["speed"]
 
         # damage timer
@@ -155,8 +155,6 @@ class Player(Entity):
                 if self.magic_index >= len(magic_data):
                     self.magic_index = 0
 
-                print(self.magic_index)
-
                 self.magic = list(magic_data.keys())[self.magic_index]
 
     def get_status(self):
@@ -245,6 +243,10 @@ class Player(Entity):
         else:
             self.energy = self.stats["energy"]
 
+    def check_death(self):
+        if self.health <= 0:
+            self.health = 1
+
     def update(self):
         self.input()
         self.cooldowns()
@@ -252,3 +254,4 @@ class Player(Entity):
         self.animate()
         self.move(self.stats["speed"])
         self.energy_recovery()
+        self.check_death()
